@@ -2,7 +2,17 @@ $(function(){
 	
 	var sessionManage = {
 
-		initial: function(){
+		initial: function(eventArr){
+
+			eventArr.forEach(function(curVal, index, arr){
+
+				sessionManage.addEvent(curVal.handle, curVal.event, curVal.myFun);
+			});
+
+			this.renewSession();
+		},
+
+		renewSession: function(){
 
 			setTimeout(function(){
 
@@ -15,9 +25,22 @@ $(function(){
 						height: "easeOutBounce"
 					}
 				});
-			},3000);
+			},10000);
+		},
+
+		addEvent: function(handle, event, myFunction){
+			
+			handle.on(event, myFunction);
 		}
 	};
 
-	sessionManage.initial();
+	var eventArr = [{handle: $("#stay"), event: "click", myFun: function(){
+						$("#dialog").hide();
+						sessionManage.renewSession();
+					}},
+					{handle: $("#exit"), event: "click", myFun: function(){
+						
+					}}];
+
+	sessionManage.initial(eventArr);
 });
