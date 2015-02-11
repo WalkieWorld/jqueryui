@@ -16,15 +16,12 @@ $(function(){
 
 			setTimeout(function(){
 
-				$("#dialog").show().animate({
-
-					opacity: .7,
-					duration: 5000,
-					specialEasing: {
-						width: "linear",
-						height: "easeOutBounce"
-					}
-				});
+				$("#dialog").removeClass("hidden").animate(
+					{"opacity": "0.7"}, 3000
+				);
+				$(".dialog").animate(
+					{"opacity": "1"}, 3000
+				);
 			},10000);
 		},
 
@@ -39,7 +36,7 @@ $(function(){
 						sessionManage.renewSession();
 					}},
 					{handle: $("#exit"), event: "click", myFun: function(){
-						
+						window.location.href = "http://www.google.com";
 					}}];
 
 	sessionManage.initial(eventArr);
