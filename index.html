@@ -7,12 +7,39 @@
 	<title>
 		jQuery UI
 	</title>
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/jquery-ui-git.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 </head>
-<body>
+<body class="wrap">
+	<section id="myAccordion">
+		<h4>XAMPP for Windows</h4>
+		<article>
+			<p>In this tutorial, we will use the latest XAMPP 1.8.2 version.</p>
+		</article>
+		<h4>XAMPP Control Panel</h4>
+		<article>
+			<p>After installation, we can use the XAMPP Control Panel to perform several actions such as starting / stopping servers and changing configurations.</p>
+		</article>
+		<h4>Integrating XAMPP with the IDE</h4>
+		<article>
+			<p>
+				Now that we have installed XAMPP and launched its components, we need to tell our IDE where these components are stored.
+			</p>
+		</article>
+	</section>
+	<section id="slider">
+		<p>
+			<label for="volume">Volume:</label>
+			<input type="text" id="volume" readonly>
+			<input type="text" id="warning" readonly>
+		</p>
+
+		<div id="volumeSlider"></div>
+	</section>
 	<section id="dialog" class="container hidden">
 		<section class="dialog">
 			<article>

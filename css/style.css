@@ -1,6 +1,9 @@
 body.container{
 	font-family: 'Josefin Sans', sans-serif;
-	margin-top: 100px;
+}
+.wrap{
+	margin: 0px auto;
+	width: 1140px;
 }
 .container{
 	left: 0px;
@@ -8,17 +11,18 @@ body.container{
 	position: fixed;
 	top: 0px;
 	bottom: 0px;
-	width: 100%;
 	height: 100%;
+	width: 100%;
 	background-color: #333;
 	opacity: 0;
 }
 .container p{
 	font-family: 'Josefin Sans', sans-serif;
 	margin: 0px 0px 10px;
+	padding: 0px 0px 10px;
 	color: #000000;
 	font-size: 1em;
-	line-height: 20px;
+	line-height: 1.3em;
 	letter-spacing: 0.02em;
 	word-spacing: 0.1em;
 }
@@ -151,4 +155,27 @@ body.container{
 }
 .hidden{
 	display: none;
+}
+#warning{
+	color: #cc0000;
+	font-size: 14px;
+	border: 0px solid #fff;
+}
+#dialog{
+	z-index: 99;
+}
+#myAccordion article{
+	height: auto;
+	overflow: hidden;
+}
+#slider{
+	margin-top: 50px;
+}
+#slider #volume{
+	border: 0px solid #fff;
+	width: 25px;
+}
+#volumeSlider{
+	height: 150px;
+	margin-top: 20px;
 }

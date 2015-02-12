@@ -39,5 +39,35 @@ $(function(){
 						window.location.href = "http://www.google.com";
 					}}];
 
+
+	$("#myAccordion").accordion();
+
+	$( "#volumeSlider" ).slider({
+
+		orientation: "vertical",
+		range: "min",
+		min: 0,
+		max: 100,
+		value: 20,
+
+		slide: function( event, ui ) {
+
+			$( "#volume" ).val( ui.value );
+
+			if ($( "#volumeSlider" ).slider( "value" ) > 50) {
+
+				$("#warning").val("The sound is too loud!");
+			}
+			else{
+
+				$("#warning").val("");
+			}
+		}
+	});
+
+
+
+    $( "#volume" ).val( $( "#volumeSlider" ).slider( "value" ) );
+
 	sessionManage.initial(eventArr);
 });
